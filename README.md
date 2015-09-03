@@ -1,6 +1,7 @@
 # NativeScript OpenUrl
 
 A NativeScript module providing basic open url action for Android and iOS.
+The Location can be: http://, https://, tel://, mailto://, sms, facetime (iOS), etc..
 
 ## License
 
@@ -16,21 +17,24 @@ Run `tns plugin add nativescript-openurl` from inside your project's main direct
 To use the openurl module you must first `require()` it.
 
 ```js
-var OpenUrl = require( "nativescript-openurl", context );
+var OpenUrl = require( "nativescript-openurl" );
 ```
 
 ### Methods
 #### OpenUrl(Location, \<context>);
 ##### Parameters
-* Location: Location you want to open in a browser
-* Context: Android only - Optional, if you don't provide a context it will automatically determine a valid context  
+* Location: Location you want to open in a browser - Can be: http://, https://, tel://, mailto://, sms, facetime (iOS), etc..
+* Context: Android only parameter - Optional, if you don't provide a context it will automatically determine a valid context  
 * RETURNS: False if failed to open, true if opening.
  
 ```js
 // my-page.js
 var OpenUrl = require("nativescript-openurl");
 OpenUrl("http://www.master-technology.com");
-
 ```
 
-This should open your browser with that location.
+This should open your browser  with that location.
+
+The Location can be: http://, https://, tel://, mailto://, sms, facetime (iOS), etc..
+
+
