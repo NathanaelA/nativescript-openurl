@@ -5,7 +5,7 @@
  * I do contract work in most languages, so let me solve your problems!
  *
  * Any questions please feel free to email me or put a issue up on the github repo.
- * Version 1.0.0                                       Nathan@master-technology.com
+ * Version 1.0.1                                       Nathan@master-technology.com
  **********************************************************************************/
 "use strict";
 
@@ -23,20 +23,21 @@ var getContext = function() {
 };
 
 
-var OpenUrl = function(Location, context) {
-    var intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(Location));
-    if (!context) {
-        context = getContext();
-        intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
-    }
-
+var openUrl = function(Location, context) {
     try {
+        var intent = new android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(Location.trim()));
+        if (!context) {
+            context = getContext();
+            intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+
         context.startActivity(intent);
     } catch (e) {
-        // We Don't do anything with an error.  We just silently ignore it.
+        // We Don't do anything with an error.  We just output it
+        console.error("Error in OpenURL", e);
         return false;
     }
     return true;
 };
 
-module.exports = OpenUrl;
+module.exports = openUrl;

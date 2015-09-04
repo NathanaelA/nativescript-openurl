@@ -1,6 +1,6 @@
 {
   "name": "nativescript-openurl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Simple NativeScript open url module for Android and iOS",
   "main": "openurl.js",
   "repository": {
@@ -9,8 +9,8 @@
   },
   "nativescript": {
 	"platforms": {
-		"android": "1.0.0",
-		"ios": "1.0.0"
+		"android": "1.0.1",
+		"ios": "1.0.1"
 	}
   },
   "keywords": [
