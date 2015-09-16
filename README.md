@@ -1,7 +1,11 @@
 # NativeScript OpenUrl
 
+** PLEASE NOTE THIS PLUGIN IS NOW DEPRECIATED as of v1.30 of NativeScript.  This plugin is NOW part of the Common Core Library. **
+
 A NativeScript module providing basic open url action for Android and iOS.
 The Location can be: http://, https://, tel://, mailto://, sms, facetime (iOS), etc..
+
+** PLEASE NOTE THIS PLUGIN IS NOW DEPRECIATED as of v1.30 of NativeScript.  This plugin is NOW part of the Common Core Library. ** 
 
 ## License
 
